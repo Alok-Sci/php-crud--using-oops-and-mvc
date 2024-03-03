@@ -1,0 +1,120 @@
+*
+{
+    font-family: "Zilla Slab", serif;
+
+    /* background-color: rgba(255, 0, 0, 0.151);
+border: 1px solid #000; */
+}
+
+html,
+body
+{
+    min-height: 100vh;
+    height: 100%;
+    max-height: auto;
+    min-width: 100vw;
+    width: 100%;
+    max-width: auto;
+}
+
+a
+{
+    color: black;
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+h1
+{
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p
+{
+    font-size: 1.2rem;
+}
+
+.btn
+{
+    font-size: 1.2rem;
+    padding-block: .8rem;
+}
+
+.has-error
+{
+    color: red !important;
+    display: block;
+}
+
+.has-error::after
+{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+}
+
+.login-success,
+.register-success,
+.update-success
+{
+    color: green !important;
+    display: block;
+}
+
+.error-block
+{
+    background-color: rgba(255, 0, 0, 0.199);
+    border: 2px solid red;
+    display: block;
+    padding: 2rem;
+    color: red;
+}
+
+.success-block
+{
+    background-color: rgba(0, 255, 0, 0.199);
+    border: 2px solid green;
+    display: block;
+    color: green;
+}
+
+.error-block,
+.success-block
+{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    height: auto;
+    width: auto;
+    border-radius: 2rem;
+    font-size: 2rem;
+    backdrop-filter: blur(34px);
+}
+
+
+/* profile picture at dashboard  */
+picture
+{
+    width: 250px !important;
+    height: 250px !important;
+}
+@media screen and (max-width: 445px)
+{
+    .form-title{
+        font-size: 2rem;
+    }
+    picture
+    {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+
+}
