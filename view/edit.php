@@ -29,13 +29,18 @@ if (isset($_SESSION['email'])) {
             <div class="container-fluid h-100">
                 <div class="row d-flex align-items-center h-100 p-3">
 
-                    <form class="col-12 col-lg-8 p-5 mx-auto rounded-4 shadow-lg"
+                    <form class="col-12 col-lg-8 p-5 mx-auto rounded-4 shadow-lg <?php echo !empty($user->update_success) ? 'border border-2 border-success' : (!empty($user->update_error) ? 'border border-2 border-danger' : NULL); ?>"
                           action="<?php echo $user->updateUser(); ?>" method="post">
 
-                        <div class="row text-center">
+                        <div class="row text-center ">
                             <h1>Update Information</h1>
                         </div>
                         <hr>
+                        <div class="row text-center my-2 <?php echo !empty($user->update_success) ? 'text-success' : (!empty($user->update_error) ? 'text-danger' : NULL);?> ">
+                            <p>
+                                <?php echo !empty($user->update_success) ? "<i class=\"fa-solid fa-circle-check pe-3\"></i>" . $user->update_success : (!empty($user->update_error) ? "<i class=\"fa-solid fa-circle-exclamation pe-3\"></i>". $user->update_error : NULL); ?>
+                            </p>
+                        </div>
                         <div class="row my-4 gap-3">
                             <div class="col-12 col-lg-5 flex-grow-1">
                                 <label for="name"
